@@ -18,10 +18,10 @@ class CardWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "Resumo",
+              "Seu resumo",
               style: TextStyle(
                 fontSize: 25,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w900,
                 color: primaryColor,
               ),
             ),
@@ -40,9 +40,9 @@ class CardWidget extends StatelessWidget {
             color: secundaryColors,
           ),
         ),
-        SizedBox(height: 5),
+        SizedBox(height: 10),
         Text(
-          "R\$ ${item.total!.toStringAsPrecision(2).replaceAll(".", ",")}",
+          "R\$ ${item.total!.toStringAsFixed(2).replaceAll(".", ",")}",
           style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.bold,
@@ -53,23 +53,21 @@ class CardWidget extends StatelessWidget {
         _buildItem(
           title: "Rentabilidade/mês",
           content:
-              "${item.profitability!.toStringAsPrecision(3).replaceAll(".", ",")} %",
+              "${item.profitability!.toStringAsFixed(3).replaceAll(".", ",")}%",
         ),
         SizedBox(height: 12),
         _buildItem(
           title: "CDI",
-          content:
-              "${item.gain!.toStringAsPrecision(2).replaceAll(".", ",")} %",
+          content: "${item.cdi!.toStringAsFixed(2).replaceAll(".", ",")}%",
         ),
         SizedBox(height: 12),
         _buildItem(
           title: "Ganho/mês",
-          content:
-              "R\$ ${item.gain!.toStringAsPrecision(2).replaceAll(".", ",")}",
+          content: "R\$ ${item.gain!.toStringAsFixed(2).replaceAll(".", ",")}",
         ),
         SizedBox(height: 20),
         Divider(),
-        SizedBox(height: 20),
+        SizedBox(height: 10),
         Align(
           alignment: Alignment.centerRight,
           child: OutlinedButton(

@@ -23,8 +23,7 @@ class SummaryRepository {
       final result = await client.query(QueryOptions(document: gql(query)));
 
       if (result.data != null) {
-        final data =
-            result.data?["wealthSummary"] as List<Map<String, dynamic>>;
+        final data = result.data?["wealthSummary"];
         final summary = SummaryModel.fromJson(data.first);
         return Right(summary);
       }

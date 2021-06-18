@@ -12,8 +12,9 @@ class AppWidget extends StatelessWidget {
         title: 'Seu resumo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
+          fontFamily: 'proxima-nova',
         ),
-        home: HomePage(title: 'Flutter Demo Home Page'),
+        home: HomePage(),
       ),
     );
   }

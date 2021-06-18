@@ -5,9 +5,6 @@ import 'package:yourresume/app/features/home/widgets/card_widget.dart';
 import 'home_provider.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
-
   @override
   _HomePageState createState() => _HomePageState();
 }
