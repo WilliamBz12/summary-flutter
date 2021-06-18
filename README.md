@@ -1,16 +1,53 @@
-# yourresume
+# Summary Flutter
 
-A new Flutter project.
+This is a simple project where the user can do sign up, sign in and create/edit your own movies list (title, year and image).
+These movies can be register using a model from Omdb platform.
 
-## Getting Started
+If I had more time, I would use an architecture more solid, as well as apply tests to every file, especially in widgets.
 
-This project is a starting point for a Flutter application.
+![](gifs/sign_up.gif)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Technologies
+- Flutter
+- Graphql/Hasura 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Start
+
+To clone the application:
+``` bash
+git clone https://github.com/WilliamBz12/summary-flutter/
+cd summary-flutter
+```
+
+## Install dependencies
+`flutter pub get`
+
+
+## Running app
+`flutter run`
+
+
+### Development
+
+In the arquitecture was used Riverpod and state notifier as state management.
+
+
+
+#### Arquitecture
+```
+features/
+|-home
+	|- repositories
+	|- state_notifiers
+	|- widgets
+	|- models
+	home_module.dart
+	home_page.dart
+core/
+	|-api
+		graphql_client_factory.dart #As API provider
+
+```
+
+#### Enjoy!
