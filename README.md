@@ -1,7 +1,6 @@
 # Summary Flutter
 
-This is a simple project where the user can do sign up, sign in and create/edit your own movies list (title, year and image).
-These movies can be register using a model from Omdb platform.
+This is a simple project where the user can see your summay from hasura api.
 
 If I had more time, I would use an architecture more solid, as well as apply tests to every file, especially in widgets.
 
